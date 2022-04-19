@@ -1,0 +1,271 @@
+:root {
+    --header_bg_color: #1f2937;
+    --quote_bg_color: #e5e7eb;
+    --cta_bg_color: #3882f6;
+    --aux_bg_color: #f9faf8;
+}
+
+/* GLOBAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--aux_bg_color);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+button {
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    border-radius: 3px;
+    outline: none;
+    color: var(--aux_bg_color);
+}
+
+
+section {
+    width: 80%;
+    min-width: 310px;
+    margin: 1rem 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
+
+/* HEADER */
+
+.header {
+    background-color: var(--header_bg_color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: var(--aux_bg_color);
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    min-width: 310px;
+    height: 20%;
+}
+
+.nav .title {
+    font-size: 1.50rem;
+    color: var(--aux_bg_color);
+    padding: 1rem 0;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav ul li a {
+    padding: 0 0 0 1rem;
+    font-size: 1.25rem;
+    color: var(--quote_bg_color);
+}
+
+/* SHOWCASE */
+
+.showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    width: 80%;
+    min-width: 310px;
+    height: 80%;
+}
+
+.showcase .showcase_text {
+    width: 50%;
+}
+
+.showcase .showcase_text p:nth-child(1) {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.showcase .showcase_text p:nth-child(2) {
+    font-size: 1.25rem;
+    color: var(--quote_bg_color);
+}
+
+.showcase .showcase_text button {
+    background-color: var(--cta_bg_color);
+    padding: 0.5rem 1rem;
+    margin: 0.75rem 0;
+    border: transparent;
+    color: var(--aux_bg_color);
+}
+
+.showcase .showcase_img {
+    width: 50%;
+    height: 100%;
+    background-color: #5d5e5f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+/* MAIN */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+/* SECTIONS */
+
+/* Random info section */
+
+.random_info {
+    background-color: #ffffff;
+    text-align: center;
+    color: var(--header_bg_color);
+}
+
+.random_info h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 1.5rem;
+}
+
+.random_info .info_cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info_cards .card {
+    padding: 1rem;
+}
+
+.info_cards .card .card_img {
+    height: 200px;
+    width: 100%;
+    border: 2px solid var(--cta_bg_color);
+    border-radius: 5px;
+    background-color: transparent
+}
+
+.info_cards .card .card_info {
+    padding: 1rem 0;
+}
+
+/* Testimonials Section */
+
+.testimonials {
+    background-color: var(--quote_bg_color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--header_bg_color);
+}
+
+.testimonials blockquote {
+    display: block;
+    font-size: 2.25rem;
+    font-weight: 200;
+    font-style: italic;
+    width: 70%;
+    text-align: center;
+    padding: 1.75rem 1rem;
+}
+
+.testimonials blockquote p {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: end;
+    padding: 1rem;
+    text-align: right;
+    font-weight: 600;
+}
+
+/* SIGN UP */
+
+.sign_up {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    background-color: var(--cta_bg_color);
+    border-radius: 4px;
+    ;
+}
+
+.sign_up .sign_up_text {
+    width: 72.5%;
+    color: var(--aux_bg_color);
+    padding: 2rem 0;
+}
+
+.sign_up button {
+    padding: 0.5rem 1.25rem;
+    background-color: transparent;
+    border: 2px var(--aux_bg_color) solid;
+    border-radius: 3px;
+    color: var(--aux_bg_color);
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header_bg_color);
+    color: var(--aux_bg_color);
+    padding: 2.5rem 0;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 767px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .showcase {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info_cards {
+        flex-direction: column;
+    }
+
+    .sign_up {
+        flex-direction: column;
+    }
+}
